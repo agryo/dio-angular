@@ -14,7 +14,10 @@ class MeuComponent extends HTMLElement {
            (Poder ser fechada (mode: closed) que não aceita ser modificada por fora.) */
         const shadow = this.attachShadow({ mode: "open" });
     
-        /* Aqui é a base do componente, o que irá entrar no meu HTML na página. */
+        /* Aqui é a base do componente, o que irá entrar no meu HTML na página. 
+           - document = É a página em si, a "raiz" da página, tudo está dentro de document.
+           - createElement = É o elemento do HTML, a Tag a ser usada. 
+           - textContent = É o que fica dentro da Tag (Nesse caso a Tag "h1"). */
         const componentRoot = document.createElement("h1");
         componentRoot.textContent = "Agryo - Modelo criado no JS";
     
@@ -22,6 +25,8 @@ class MeuComponent extends HTMLElement {
            Ele já vai no formato exato de como ele foi programado, estilizado e entra em qualquer
            parte do HTML sem bagunçar o estilo do próprio site. Diminuindo assim o CSS do site. */
         const style = document.createElement("style");
+        /* O textContent é o próprio texto do arquivo CSS, literalmente.
+           Repare que ele fica dentro das aspas como se fosse uma String. */
         style.textContent = `
             h1{
                 color: red
@@ -34,6 +39,9 @@ class MeuComponent extends HTMLElement {
     }
   }
   /* E aqui ele define, envia o componente para ser usado no HTML como Tag. 
+     É a Tag a ser usada lá dentro do HTML. (Nesse caso a Tag "meu-componente")
      Especificando o nome da Tag (sempre com um "-" (hifen) para diferenciar das Tags originais) 
      caso contrário vai dar problema. */
   customElements.define("meu-componente", MeuComponent);
+  /*                           ^                ^
+                          Nome da Tag     Classe da Tag  */

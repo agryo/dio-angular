@@ -7,6 +7,8 @@
     <title>PORTAL DE NOTÍCIAS</title>
     <!-- Chama os Códigos JS - Componentes. (O comando "defer" serve para carregar o JS após terminar de carregar tudo.)-->
     <script src="src/ModeloComponent.js" defer></script>
+    <script src="src/TituloDinamico.js" defer></script>
+    <script src="src/CardNoticia.js"></script>
 </head>
 
 <body>
@@ -15,7 +17,15 @@
     <!-- Agora pode ser chamada com essa simples Tag quantas vezes precisar. -->
     <meu-componente></meu-componente>
     <meu-componente></meu-componente>
-    <meu-componente></meu-componente>
+    <!-- Agora pode ser chamada a Tag usando o parametro (atributo) criado no JS. -->
+    <titulo-dinamico titulo="Notícia Aqui."></titulo-dinamico>
+    <card-news 
+        autor="Agryo Araújo"
+        titulo="Notícias de Última hora de Cruzeta/RN"
+        link-url="https://agryo.cruzeta.com.br"
+        foto="assets/imagem1-350x224.jpg"
+        conteudo="As notícias de Cruzeta/RN, estão todas aqui no site e você pode ler a vontade a qualquer momento."
+    ></card-news>
     
 </body>
 

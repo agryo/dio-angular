@@ -16,7 +16,7 @@ class MeuComponent extends HTMLElement {
     
         /* Aqui é a base do componente, o que irá entrar no meu HTML na página. */
         const componentRoot = document.createElement("h1");
-        componentRoot.textContent = "Agryo";
+        componentRoot.textContent = "Agryo - Modelo criado no JS";
     
         /* Aqui é o estilo (CSS), que vai ser modificado apenas no componente que estou usando.
            Ele já vai no formato exato de como ele foi programado, estilizado e entra em qualquer

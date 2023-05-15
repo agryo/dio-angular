@@ -37,7 +37,7 @@ class CardNoticia extends HTMLElement {
   
       const newsImage = document.createElement("img");
       newsImage.src = this.getAttribute("foto") || "assets/default-330x175.jpg";
-      newsImage.alt = "Foto da Notícia";
+      newsImage.alt = this.getAttribute("alternativo");
       cardRight.appendChild(newsImage);
   
       componentRoot.appendChild(cardLeft);
@@ -80,6 +80,10 @@ class CardNoticia extends HTMLElement {
           
           .card__left > p {
             color: rgb(70, 70, 70);
+          }
+
+          .card__right > img {
+            display: -webkit-box;
           }
       `;
   

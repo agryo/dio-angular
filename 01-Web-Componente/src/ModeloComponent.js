@@ -16,7 +16,7 @@ class MeuComponent extends HTMLElement {
     
         /* Aqui é a base do componente, o que irá entrar no meu HTML na página. */
         const componentRoot = document.createElement("h1");
-        componentRoot.textContent = "Felipe";
+        componentRoot.textContent = "Agryo";
     
         /* Aqui é o estilo (CSS), que vai ser modificado apenas no componente que estou usando.
            Ele já vai no formato exato de como ele foi programado, estilizado e entra em qualquer
@@ -24,11 +24,11 @@ class MeuComponent extends HTMLElement {
         const style = document.createElement("style");
         style.textContent = `
             h1{
-            color: red
+                color: red
             }
-        `;
-    
-        
+        `;    
+        /* Aqui ele adiciona na shadow o "componentRoot" e o "style" criado acima. 
+           Adiciona como filhas (child) do pai (parent) que é shadow. */
         shadow.appendChild(componentRoot);
         shadow.appendChild(style);
     }

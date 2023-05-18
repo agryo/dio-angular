@@ -18,8 +18,11 @@ class Personagem {
         console.log(`Ataque com ${this.forca} pontos.`);
     }
 }
-//Personagem: A classe personagem é uma Superclass (Classe pai).
-//Magico: A classe Magico é uma Subclass (Classe filha).
+/*
+   Personagem: A classe personagem é uma Superclass (Classe pai).
+   Magico: A classe Magico é uma Subclass (Classe filha).
+   Tudo de Personagem é herdado para Magico (extends).
+*/
 class Magico extends Personagem {
     constructor(nome, forca, habilidade, pontosMagia) {
         // O método super(), puxar tudo da classe pai.

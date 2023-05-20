@@ -13,3 +13,7 @@
 * Auto Rename Tag
   
 * Material Icon Theme
+
+
+OBS.: Instalar o Angular VSCode
+npm install -g @angular/cli@latest

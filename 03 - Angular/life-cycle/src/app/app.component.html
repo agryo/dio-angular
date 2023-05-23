@@ -1,3 +1,5 @@
 <h1>Meu APP (:p)</h1>
-<app-exemplo-check></app-exemplo-check>
+<button (click)="ativarExemploCheck()">Ativar o componente</button>
+<app-exemplo-check *ngIf="isAliveExemploCheck"></app-exemplo-check>
+<button (click)="discartarExemploCheck()">Destruir o componente</button>
 <router-outlet></router-outlet>

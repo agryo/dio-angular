@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'life-cycle';
+  isAliveExemploCheck: boolean = true
+
+  ativarExemploCheck(){
+    this.isAliveExemploCheck = true
+  }
+
+  discartarExemploCheck(){
+    this.isAliveExemploCheck = false
+  }
 }

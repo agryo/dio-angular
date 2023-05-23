@@ -4,7 +4,8 @@ import {Component,
         AfterContentChecked,
         AfterContentInit,
         AfterViewChecked,
-        AfterViewInit    
+        AfterViewInit,
+        OnDestroy
 } from '@angular/core';
 
 @Component({
@@ -18,7 +19,8 @@ implements OnInit,
            AfterContentChecked,
            AfterContentInit,
            AfterViewChecked,
-           AfterViewInit
+           AfterViewInit,
+           OnDestroy
 {
   constructor(){  }
 
@@ -32,23 +34,36 @@ implements OnInit,
     this.quantidade --;
   }
 
-  ngAfterViewInit(): void {
-    console.log("ngAfterViewInit");
+  //Executa quando o componente é inicializado.
+  ngOnInit(): void {
+    console.log("ngOnInit");
   }
-  ngAfterViewChecked(): void {
-    console.log("ngAfterViewChecked");
-  }
-  ngAfterContentInit(): void {
-    console.log("ngAfterContentInit");
-  }
-  ngAfterContentChecked(): void {
-    console.log("ngAfterContentChecked");
-  }
+  //Executa quando alguma coisa é modificada.
   ngDoCheck(): void {
     console.log("ngDoCheck");
   }
-  ngOnInit(): void {
-    console.log("ngOnInit");
+
+  //Sequencia - checked, content, init
+
+  //Quando o primeiro conteúdo é iniciado.
+  ngAfterContentInit(): void {
+    console.log("ngAfterContentInit");
+  }
+  //Depois da inicialização da view
+  ngAfterViewInit(): void {
+    console.log("ngAfterViewInit");
+  }
+  //Após alguma alteração na tela, verifica o conteúdo.
+  ngAfterContentChecked(): void {
+    console.log("ngAfterContentChecked");
+  }
+  //Após alguma alteração na tela, verifica a view.
+  ngAfterViewChecked(): void {
+    console.log("ngAfterViewChecked");
+  }
+  //Executa quando é destruído o componente, finalizado.
+  ngOnDestroy(): void {
+    console.log("Autodestrução do componente!!!")
   }
   
 }

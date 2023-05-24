@@ -1,0 +1,20 @@
+.container_titulo-principal{
+    background-color:  #15283B;
+}
+
+.container_titulo-principal > h1{
+    background-color:  #15283B;
+    color: #FFFFFF;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 100px;
+    font-family: 'Segoe UI';
+    display: flex;
+    justify-content: center;
+}
+
+.container_titulo-principal > hr{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-color: #409FDA;;
+}

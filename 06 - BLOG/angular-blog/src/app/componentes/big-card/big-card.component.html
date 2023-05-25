@@ -1,22 +1,19 @@
 <div class="container_big-card">
     <div class="big-card_foto">
         <img 
-            src="https://escolatrilhas.com.br/wp-content/uploads/2015/11/noticias.jpg"
+            src="{{ fotoCapa }}"
             alt=""
             height="250px"
             class="src"
         >
     </div>
     <div class="big-card_titulo">
-        <h1><a href="#">Notícia de Última Hora!</a></h1>
+        <h1><a href="#">{{ tituloCard }}</a></h1>
     </div>
     <div class="big-card_descricao">
         <p>
             <a href="#">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit velit tortor, 
-                eu euismod lorem imperdiet nec. Ut maximus odio sit amet malesuada tincidunt. Fusce mollis 
-                nulla enim, sed congue lacus tempus at. Nam vestibulum nec nulla nec accumsan. Sed tincidunt 
-                nisl at purus scelerisque, ac commodo libero dignissim.
+                {{ descricaoCard }}
             </a>
         </p>
     </div>

@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 
 import { IndexModule } from './paginas/index/index.module';
 import { PortifolioModule } from './paginas/portifolio/portifolio.module';
+import { MenuComponent } from './compartilhado/menu/menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

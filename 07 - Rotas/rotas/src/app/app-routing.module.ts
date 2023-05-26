@@ -5,7 +5,8 @@ import { CardComponent } from './paginas/portifolio/card/card.component';
 
 const routes: Routes = [
   {path:'', component: TituloComponent, pathMatch: 'full'},
-  {path:'portfolio', component: CardComponent, pathMatch: 'prefix'}
+  {path:'portfolio', component: CardComponent, pathMatch: 'prefix'},
+  {path:'**', redirectTo:''}
 ];
 
 @NgModule({
